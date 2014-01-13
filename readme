@@ -1,7 +1,6 @@
- 用vim的插件搭建一个类似sourceinsight的vi，同时加了一些vim及脚本，最近看到很多人想要有sourceinsight功能的vim,
- 由于整个配置还是有点麻烦，于是将我配置的vim发上来，只需一条命令，就可安装完ctagslist,cscope,fielexporeer等插件，
- 达到sourceinsight的效果。
-
+ 用vim的插件搭建一个类似sourceinsight的vi，同时加了一些vim及脚本，最近看到很多人想要有
+ sourceinsight功能的vim,由于整个配置还是有点麻烦，于是将我配置的vim发上来，只需一条命令，
+ 就可安装完ctagslist,cscope,fielexporeer等插件，达到sourceinsight的效果。
 
 安装过程：
 大家下载附件，然后解压
@@ -15,10 +14,9 @@ sudo aptitude install vim-full
 sudo apt-get install vim-gnome
 
 使用指南：
-进入vim后，在命令模式下键入wm，即可打开ide界面，使用ctrl+］即可函数追踪，ctrl+m+f,ctrl+m＋c,ctrl+m＋s,ctrl+m＋t
-是常用的。使用这些前，你需要使用键入cs project文件夹，命令，然后才能对你的项目里的源代码使用这些功能。
-如cs ~/source/os
-这个支持任意文件夹打开项目。
+进入vim后，在命令模式下键入wm，即可打开ide界面，使用ctrl+］即可函数追踪，ctrl+m+f,ctrl+m＋c,
+ctrl+m＋s,ctrl+m＋t是常用的。使用这些前，你需要使用键入cs project文件夹，命令，然后才能对你的
+项目里的源代码使用这些功能。如cs ~/source/os这个支持任意文件夹打开项目。
 
 常用命令:
 wm打开ide界面，再次wm就关闭了
@@ -65,5 +63,5 @@ ctrl+t：返回上一个查找的地方
 Plugin is not loaded."
 
 没有关联Ctags和Taglist在~/.vimrc中加入 ： let Tlist_Ctags_Cmd='/usr/bin/ctags'
-其实我已经在 install 中加入了，如果还是出现错误，则找到你的可执行程序ctags 所在处手动的在~/.vimrc中加入
-let Tlist_Ctags_Cmd='你的ctags路径'.
+其实我已经在 install 中加入了，如果还是出现错误，则找到你的可执行程序ctags 所在处
+手动的在~/.vimrc中加入let Tlist_Ctags_Cmd='你的ctags路径'.
