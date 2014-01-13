@@ -3,9 +3,15 @@
  就可安装完ctagslist,cscope,fielexporeer等插件，达到sourceinsight的效果。
 
 安装过程：
-大家下载附件，然后解压
-然后切到解压后的文件夹，
-执行sudo ./install即可
+大家下载附件，然后解压然后切到解压后的文件夹，执行sudo ./install即可.
+
+或者这样:
+#Clone repository:
+git clone https://github.com/ustcdane/vim_install.git
+#install
+cd vim_install
+sudo ./install
+
 然后执行sudo apt-get  install vim
 sudo apt-get install vim-full  
 出现问题的话，那就执行如下命令:   
