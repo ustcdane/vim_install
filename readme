@@ -30,7 +30,7 @@ ctrl+w在各个窗口切换
 ctrl+h切换到左边的窗口
 ctrl+j切换到下面的窗口
 ctrl+l切换到右边的窗口
-ctrl+j切换到上面的窗口
+ctrl+k切换到上面的窗口
 ctrl+]函数跟踪
 ctrl+m+c/f/t/s分别对应cscope的各种快捷件
 当我们需要阅读代码时，必须先生成tags文件和cscope.out文件，这个可以通过我
