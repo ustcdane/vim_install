@@ -1,0 +1,81 @@
+常用命令:
+wm打开ide界面，再次wm就关闭了
+ctrl+w在各个窗口切换
+ctrl+h切换到左边的窗口
+ctrl+j切换到下面的窗口
+ctrl+l切换到右边的窗口
+ctrl+j切换到上面的窗口
+ctrl+]函数跟踪
+ctrl+m+c/f/t/s分别对应cscope的各种快捷件
+当我们需要阅读代码时，必须先生成tags文件和cscope.out文件，这个可以通过我
+些的脚本自动生成
+比如你要阅读source文件夹下的代码
+就使用cs source
+当Source下有文件更新了，你可以使用
+cs source -u来更新
+
+
+
+补充：
+
+
+ 用vim的插件搭建一个类似sourceinsight的vi，同时加了一些vim及脚本，最近看到很多人想要有sourceinsight功能的vim,由于整个配置还是有点麻烦，于是将我配置的vim发上来，只需一条命令，就可安装完ctagslist,cscope,fielexporeer等插件，达到sourceinsight的效果。
+
+使用指南：
+　进入vim后，在命令模式下键入wm，即可打开ide界面，使用ctrl+］即可函数追踪，ctrl+m+f,ctrl+m＋c,ctrl+m＋s,ctrl+m＋t是常用的。
+使用这些前，你需要使用键入
+cs project文件夹，命令，然后才能对你的项目里的源代码使用这些功能。
+如cs ~/source/ucos
+这个支持任意文件夹打开项目。
+
+
+快捷键 cs f s/g/....
+
+s: 查找C语言符号，即查找函数名、宏、枚举值等出现的地方
+g: 查找函数、宏、枚举等定义的位置，类似ctags所提供的功能
+d: 查找本函数调用的函数
+c: 查找调用本函数的函数
+t: 查找指定的字符串
+e: 查找egrep模式，相当于egrep功能，但查找速度快多了
+f: 查找并打开文件，类似vim的find功能
+i: 查找包含本文件的文
+当然在底行模式下介键入 help 会弹出 vim的帮助。
+
+2，使用cscope查找do_fork函数的定义：
+在vim命令行下执行：
+
+:cs f g do_fork
+
+就可以查看do_fork的全局定义了。
+
+cscope常用快捷键：
+
+先按 ctrl+\ 然后 再按以下键：  
+
+ctrl+］：在函数调用的地方跳转到函数定义的地方
+ctrl+t：返回上一个查找的地方
+
+ 
+
+ 
+
+安装过程：
+大家下载附件，然后解压
+然后切到解压后的文件夹，
+执行sudo ./install即可
+然后执行sudo apt-get  install vim
+               sudo apt-get install vim-full  //这个可能会出问题，那就执行   sudo apt-get remove vim    sudo aptitude install vim-full
+                sudo apt-get install vim-gnome
+
+
+
+
+可能会出现错误：
+"Taglist: Exuberant ctags (http://ctags.sf.net) not found in PATH. 
+Plugin is not loaded."
+
+没有关联Ctags和Taglist
+
+在~/.vimrc中加入 ： let Tlist_Ctags_Cmd='/usr/bin/ctags'
+
+其实我已经在 install 中加入了，如果还是出现错误，则找到你的可执行程序ctags 所在处手动的在~/.vimrc中加入let Tlist_Ctags_Cmd='你的ctags路径'

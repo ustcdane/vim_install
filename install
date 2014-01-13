@@ -1,0 +1,11 @@
+#!/bin/bash
+echo 'let $dir=''"'$HOME'/.vim"'>tmp
+echo 'let Tlist_Ctags_Cmd="/usr/bin/ctags"' >>tmp
+cat .vimrc>>tmp
+cp -f cs ctags cscope /usr/bin
+mv ~/.vim ~/.vimb 2>/dev/null
+mkdir -p ~/.vim
+chmod a+rw ~/.vim
+cp -rf ./.vim/* ~/.vim
+cp ~/.vimrc ~/.vimrcb
+mv -f tmp ~/.vimrc
