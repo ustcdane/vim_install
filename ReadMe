@@ -12,7 +12,8 @@ git clone https://github.com/ustcdane/vim_install.git
 cd vim_install
 sudo ./install
 
-然后执行sudo apt-get  install vim
+然后执行(如果已经安装vim 这步可略过)
+sudo apt-get  install vim
 sudo apt-get install vim-full  
 出现问题的话，那就执行如下命令:   
 sudo apt-get remove vim    
